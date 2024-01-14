@@ -9,8 +9,8 @@ import { FiFeather } from "react-icons/fi";
 import { FiEye } from "react-icons/fi";
 import { BsBrightnessHigh } from "react-icons/bs";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
-import { IoArrowBackCircle } from "react-icons/io5";
-import { IoArrowForwardCircle } from "react-icons/io5";
+import Footer from './components/footer'
+import Slider from './components/slider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -131,51 +131,7 @@ export default function Home() {
           </div>
         </div>
         {/* SLIDER SECTION */}
-        <div>
-          <div className={styles.slidercontainer}>
-            <div className={styles.slidertop}>
-            <h3 className={styles.sliderheader}>An enterprise template to ramp up your company website</h3>
-            <div className='d-flex mt-5'>
-            <IoArrowBackCircle  className={styles.previcon}/>
-            <IoArrowForwardCircle className={styles.previcon}/>
-            
-           
-            </div>
-            </div>
-            <div className={styles.slidergrid}>
-            <div className={styles.eachslider}>
-              <p className={styles.slidertext}>“Buyer buzz partner network disruptive non-disclosure agreement business”</p>
-              <div className='d-flex'>
-              <Image src="/slideone.png" alt='logoone' width={30} height={30} className={styles.sliderimg}/>
-              <div>
-                <h6 className={styles.slidername}>Albus Dumbledore</h6>
-                <p className={styles.rank}>Manager @ Howarts</p>
-              </div>
-              </div>
-            </div>
-            <div className={styles.eachslider}>
-              <p className={styles.slidertext}>“Learning curve infrastructure value proposition advisor strategy user experience hypotheses investor.”</p>
-              <div className='d-flex'>
-              <Image src="/slidetwo.png" alt='logoone' width={20} height={20} className={styles.sliderimg}/>
-              <div>
-                <h6 className={styles.slidername}>Severus Snape</h6>
-                <p className={styles.rank}>Manager @ Slytherin</p>
-              </div>
-              </div>
-            </div>
-            <div className={styles.eachslider}>
-              <p className={styles.slidertext}>“Release facebook responsive web design business model canvas seed money monetization.”</p>
-              <div className='d-flex'>
-              <Image src="/slide3.png" alt='logoone' width={10} height={10} className={styles.sliderimg}/>
-              <div>
-                <h6 className={styles.slidername}>Harry Potter</h6>
-                <p className={styles.rank}>Team Leader @ Gryffindor</p>
-              </div>
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
+        <Slider/>
         {/* SECTION SIX */}
         <div>
           <div className={`${styles.sixth}  row align-items-center`}>
@@ -313,37 +269,8 @@ export default function Home() {
             </div> 
           </div>
         </div>
-
-        <div>
-          <div className={styles.footergrid}>
-          <div className={styles.pergrid}>
-          <Image src="/logo.png" alt='logo' width={100} height={30} />
-          <div className={styles.footertext}>Social media validation business model canvas graphical user interface launch party creative facebook iPad twitter.</div>
-          </div>
-          <div className={styles.grids}>
-            <h6 className={styles.footerheading}>Landings</h6>
-            <Link href="#" className={styles.footerlinks}>Home</Link>
-            <Link href="#" className={styles.footerlinks}>Products</Link>
-            <Link href="#" className={styles.footerlinks}>Services</Link>
-          </div>
-          <div className={styles.grids}>
-            <h6 className={styles.footerheading}>Company</h6>
-            <Link href="#" className={styles.footerlinks}>Home</Link>
-            <div className='d-flex align-items-center'>
-            <Link href="#" className={styles.footerlinks}>Careers</Link><p className={styles.hiring}>Hiring!</p>
-            </div>
-            <Link href="#" className={styles.footerlinks}>Services</Link>
-          </div>
-          <div className={styles.endgrid}>
-            <h6 className={styles.footerheading}>Landings</h6>
-            <Link href="#" className={styles.footerlinks}>Blog</Link>
-            <Link href="#" className={styles.footerlinks}>Products</Link>
-            <Link href="#" className={styles.footerlinks}>Services</Link>
-          </div>
-
-          </div>
-          <div className={styles.copyright}>All rights reserved.</div>
-        </div>
+          {/* FOOTER */}
+        <Footer/>
       </main>
     </>
   )
