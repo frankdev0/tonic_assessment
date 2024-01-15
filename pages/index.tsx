@@ -10,11 +10,40 @@ import { FiEye } from "react-icons/fi";
 import { BsBrightnessHigh } from "react-icons/bs";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import Footer from './components/footer'
-import Slider from './components/slider'
+import Sliderr from './components/slider'
+import { FaBars } from "react-icons/fa6";
+import { IoClose } from "react-icons/io5";
+import { useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const openMobileMenu = () => {
+    setMobileMenuOpen(true);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
+  const [showDropdown1, setShowDropdown1] = useState(false);
+  const [showDropdown2, setShowDropdown2] = useState(false);
+
+  const toggleDropdown1 = () => {
+    setShowDropdown1(!showDropdown1);
+    // Close other dropdowns if needed
+    setShowDropdown2(false);
+  };
+
+  const toggleDropdown2 = () => {
+    setShowDropdown2(!showDropdown2);
+    // Close other dropdowns if needed
+    setShowDropdown1(false);
+  };
+
   return (
     <>
       <Head>
@@ -28,13 +57,46 @@ export default function Home() {
         <div className={styles.navcontainer}>
         <Image src="/logo.png" alt='logo' width={100} height={30} />
         <div className={styles.rightnav}>
+          <div className={styles.respnav}>
           <Link href="#" className={styles.menuitem}>Product </Link>
           <Link href="#" className={styles.menuitem}>Services</Link>
           <Link href="#" className={styles.menuitem}>About</Link>
-          <div><button className={styles.navbtn}>Log In</button></div>
+          
+          
+        <button className={styles.navbtn}>Log In</button>
+    
+    
+    </div>
+    <div className={styles.btnmedia}>
+    <div className={styles.barscontainer} onClick={openMobileMenu}>
+    <FaBars className={styles.fabars}/>
+    </div>
+    </div>
+          
         </div>
+        
+
+    {isMobileMenuOpen && (
+    <div className={styles.mobilemenu}>
+      <div className={styles.mobileheader}>
+      <button className={styles.mobilenavbtn}>Log In</button>
+      <div className={styles.close} onClick={closeMobileMenu}>
+      <IoClose className={styles.closeicon}/>
+      </div>
+     
+      </div>
+      
+      <div className={styles.mobilelinks}>
+      <Link href='/#' className={styles.mobilelink}>Product</Link>
+      <Link href='/#' className={styles.mobilelink}>Services</Link>
+      <Link href='/#' className={styles.mobilelink}>About</Link>
+      </div>
+    
+     </div>
+    )}
         </div>
         </nav>
+        
         {/* HERO SECTION */}
         <div>
           <div className='row'>
@@ -131,7 +193,7 @@ export default function Home() {
           </div>
         </div>
         {/* SLIDER SECTION */}
-        <Slider/>
+        <Sliderr/>
         {/* SECTION SIX */}
         <div>
           <div className={`${styles.sixth}  row align-items-center`}>
@@ -179,15 +241,26 @@ export default function Home() {
                
                <div className='d-flex align-items-center my-2 justify-content-end '>
               <p className='my-0 pb-2 mx-0 px-3'>We connect our customers with the best?</p>
-              <IoIosArrowDropdownCircle className={styles.dropicon}/>
+              <IoIosArrowDropdownCircle className={styles.dropicon} onClick={toggleDropdown1}/>
               </div>
+                    {showDropdown1 && (
+              <div className='d-flex align-items-center justify-content-end'>
+                <p>Your dropdown content here...</p>
+              </div>
+            )}
               <div className='d-flex align-items-center justify-content-end '>
               <div className={styles.borderr}/>
               </div>
                 <div className='d-flex align-items-center my-2 justify-content-end pt-4'>
               <p className='my-0 pb-2 mx-0 px-3'>Android research & development rockstar?</p>
-              <IoIosArrowDropdownCircle className={styles.dropicon}/>
+              <IoIosArrowDropdownCircle className={styles.dropicon} onClick={toggleDropdown2} />
               </div>
+                    {showDropdown2 && (
+              <div className='d-flex align-items-center justify-content-end'>
+                
+                <p>Your dropdown content here...</p>
+              </div>
+            )}
               <div className='d-flex align-items-center justify-content-end '>
               <div className={styles.borderr}/>
               </div>
