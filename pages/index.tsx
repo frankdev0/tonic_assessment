@@ -64,7 +64,9 @@ export default function Home() {
           
           
         <button className={styles.navbtn}>Log In</button>
-    
+        <div className={styles.clippath}>
+                        
+                        </div>
     
     </div>
     <div className={styles.btnmedia}>
@@ -273,7 +275,7 @@ export default function Home() {
           </div>
         </div>
         {/* SECTION EIGHT */}
-
+                      
         <div className={styles.sectionseven}>
           <div>
             <div className={styles.servicestext}>
@@ -338,6 +340,7 @@ export default function Home() {
         {/* SECTION NINE */}
         <div className='d-flex justify-content-center my-5'>
           <div className={styles.banner}>
+            <div className={styles.eclipse}></div>
           <h6 className={styles.bannerheader}>An enterprise template to ramp up your company website</h6> 
           <div className={styles.calltoaction}>
             <input placeholder='Your email address' type='text' className={styles.inputfield}/>
