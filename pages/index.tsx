@@ -227,7 +227,7 @@ export default function Home() {
             </div>
             </div>
             <div className='d-flex justify-content-center align-items-center col-12 col-lg-6 mt-2'>
-            <Image src="/group2.png" alt='logoone' width={500} height={500} />
+            <Image src="/group2.svg" alt='logoone' width={500} height={500} />
             </div>
           </div>
         </div>
@@ -235,7 +235,7 @@ export default function Home() {
 
         <div>
           <div className='d-flex justify-content-center'>
-          <Image src="/group3.png" alt='logoone' width={500} height={300} className={styles.img}/>
+          <Image src="/group3.svg" alt='logoone' width={500} height={300} className={styles.img}/>
           </div>
           <div className={`${styles.sixth}  row align-itms-center mb-5`}>
             <div className='col-12 col-lg-6'>
