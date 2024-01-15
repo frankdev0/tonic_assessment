@@ -80,7 +80,7 @@ padding: 0rem 1rem;
 }
 
 .herotexts{
-  font-size: 0.75rem;
+  font-size: 1rem;
   width: 500px;
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -280,7 +280,8 @@ line-height: 35px;
 
 .blogheader{
   color: #000000;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
+  padding: 1rem 0rem;
 }
 
 .blogsubtext{
@@ -308,7 +309,7 @@ line-height: 35px;
 }
 
 .blogtexts{
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   width: 200px;
 }
 
@@ -424,7 +425,7 @@ line-height: 35px;
 
 .footertext{
   margin-top: 2rem;
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   color: #777777;
   width: 220px;
 }
@@ -454,12 +455,12 @@ line-height: 35px;
   text-decoration: none;
   appearance: none;
 color: #777777;
-font-size: 0.75rem;
+font-size: 0.80rem;
 margin: 1rem 0rem;
 }
 
 .copyright{
-  font-size: 0.65rem;
+  font-size: 0.85rem;
   color: #777777;
   padding-left: 5rem;
   margin-bottom: 2rem;
