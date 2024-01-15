@@ -138,9 +138,12 @@ export default function Home() {
                 <div className={styles.eachgrid}>
                 <Image src="/cardone.png" alt='logoone' width={250} height={300} />
                 <p className={styles.cardtext}>Cool feature title</p>
-                <div className={`${styles.explore} d-flex align-items-center`}>
-                <Link href="#" className={styles.cardlink}>Explore page</Link>
+                <div className={`${styles.explore} d-flex align-items-center `}>
+                  <div>
+                  <Link href="#" className={styles.cardlink}>Explore page</Link>
                 <IoMdArrowForward className={styles.arrow}/>
+                  </div>
+                
                 </div>
                 </div>
                 <div className={styles.eachgrid}>
@@ -171,21 +174,21 @@ export default function Home() {
             </div>
             <div className='col-12 col-lg-6 align-items-center justify-content-center'>
               <h3 className={styles.fifthheader}>We connect our customers with the best, and help them keep up-and stay open.</h3>
-              <div className='my-4'>
-              <div className='d-flex align-items-center my-2'>
+              <div className='my-4 '>
+              <div className={`${styles.points}`}>
               <IoCheckmarkCircle className={styles.goodicon}/>
               <p className='my-0 py-0 mx-0 px-3'>We connect our customers with the best.</p>
               </div>
-              <div className='d-flex align-items-center'>
+              <div className={`${styles.points}`}>
               <IoCheckmarkCircle className={styles.goodicon}/>
               <p className='my-0 py-0 mx-0 px-3'>Advisor success customer launch party.</p>
               </div>
-              <div className='d-flex align-items-center my-2'>
+              <div className={`${styles.points}`}>
               <IoCheckmarkCircle className={styles.goodicon}/>
-              <p className='my-0 py-0 mx-0 px-3'>Business-to-consumer long tail.</p>
+              <p className='my-0 py-0 mx-0 px-3'>Business-to-consumer long tail busines.</p>
               
               </div>
-              <div>
+              <div className={styles.respbtn}>
                 <button className={styles.headerbtn}>Start now</button>
               </div>
               </div>
@@ -221,7 +224,7 @@ export default function Home() {
               
             </div>
             </div>
-            <div className='d-flex justify-content-center align-items-center col-12 col-lg-6'>
+            <div className='d-flex justify-content-center align-items-center col-12 col-lg-6 mt-2'>
             <Image src="/group2.png" alt='logoone' width={500} height={500} />
             </div>
           </div>
@@ -244,7 +247,7 @@ export default function Home() {
               <IoIosArrowDropdownCircle className={styles.dropicon} onClick={toggleDropdown1}/>
               </div>
                     {showDropdown1 && (
-              <div className='d-flex align-items-center justify-content-end'>
+              <div className={`${styles.faq} `}>
                 <p>Your dropdown content here...</p>
               </div>
             )}
@@ -256,7 +259,7 @@ export default function Home() {
               <IoIosArrowDropdownCircle className={styles.dropicon} onClick={toggleDropdown2} />
               </div>
                     {showDropdown2 && (
-              <div className='d-flex align-items-center justify-content-end'>
+              <div className={`${styles.faq} `}>
                 
                 <p>Your dropdown content here...</p>
               </div>
@@ -284,42 +287,42 @@ export default function Home() {
             <div className={styles.servicegrid}>
                 <div className={styles.eachgrid}>
                 <Image src="/blog1.png" alt='logoone' width={300} height={150} />
-                <div className='d-flex mt-3'>
+                <div className={`${styles.respblog} d-flex mt-3`}>
                 <p className={styles.blogtext}>Category</p>
                 <p className={styles.blogtime}>November 22, 2021</p>
                 </div>
                 <div className={`${styles.blogtexts}`}>
                 <p className='mx-0 my-0 py-0'>Pitch termsheet backing validation focus release.</p>
                 </div>
-                <div className='d-flex align-items-center my-3'>
+                <div className={`${styles.respblog} d-flex align-items-center my-3`}>
                 <Image src="/pic1.png" alt='logoone' width={10} height={10} className={styles.blogimg}/>
                   <p className={styles.blogger}>Chandler Bling</p>
                 </div>
                 </div>
                 <div className={styles.eachgrid}>
                 <Image src="/blog2.png" alt='logoone' width={300} height={150} />
-                <div className='d-flex mt-3'>
+                <div className={`${styles.respblog} d-flex mt-3`}>
                 <p className={styles.blogtext}>Category</p>
                 <p className={styles.blogtime}>November 22, 2021</p>
                 </div>
                 <div className={`${styles.blogtexts}`}>
                 <p className='mx-0 my-0 py-0'>Seed round direct mailing non-disclosure agreement graphical user interface rockstar.</p>
                 </div>
-                <div className='d-flex align-items-center my-3'>
+                <div className={`${styles.respblog} d-flex align-items-center my-3`}>
                 <Image src="/pic2.png" alt='logoone' width={10} height={10} className={styles.blogimg}/>
                   <p className={styles.blogger}>Rachel Green</p>
                 </div>
                 </div>
                 <div className={styles.eachgrid}>
                 <Image src="/blog3.png" alt='logoone' width={300} height={150} />
-                <div className='d-flex mt-3'>
+                <div className={`${styles.respblog} d-flex mt-3`}>
                 <p className={styles.blogtext}>Category</p>
                 <p className={styles.blogtime}>November 22, 2021</p>
                 </div>
                 <div className={`${styles.blogtexts}`}>
                 <p className='mx-0 my-0 py-0'>Beta prototype sales iPad gen-z marketing network effects value proposition</p>
                 </div>
-                <div className='d-flex align-items-center my-3'>
+                <div className={`${styles.respblog} d-flex align-items-center my-3`}>
                 <Image src="/pic3.png" alt='logoone' width={10} height={10} className={styles.blogimg}/>
                   <p className={styles.blogger}>Monica Geller</p>
                 </div>
